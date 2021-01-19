@@ -5,9 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/myCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,6 +34,7 @@
                 android:layout_height="121dp"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/android"
+                android:transitionName="imageTransition"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -44,6 +47,7 @@
                 android:text="@string/name"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                android:transitionName="nameTransition"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toEndOf="@id/myImage"
                 android:layout_marginTop="20dp"
@@ -56,6 +60,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/description"
                 android:textSize="12sp"
+                android:transitionName="descriptionTransition"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="5dp"
                 app:layout_constraintStart_toEndOf="@id/myImage"
@@ -64,7 +69,22 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
+
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/clicktext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/myCard"
+        android:text="@string/clicktext"
+        android:textColor="@color/white"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
